@@ -15,7 +15,7 @@ const WalletMultiButtonDynamic = dynamic(
 
 export default function DappBar() {
   return (
-    <AppBar position="static" sx={{ flexGrow: 1 }} elevation={0}>
+    <AppBar position="static" sx={{ flexGrow: 1 }} elevation={0} className="navbar">
       <Toolbar>
         <Typography
           variant="h6"
@@ -23,7 +23,7 @@ export default function DappBar() {
           noWrap
           sx={{ flex: 1, fontFamily: "Quantico" }}
         >
-          Sigrid
+          Wurren Buffat
         </Typography>
         <WalletMultiButtonDynamic />
         <WalletDisconnectButtonDynamic />

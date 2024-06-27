@@ -100,6 +100,7 @@ export default function Home() {
     <>
       <DappBar />
       <Container maxWidth="sm">
+        <img src="/cloud.png" alt="clouds" className="clouds"/>
         <SwapComponentCard
           quotebag={quoteBag}
           direction="up"
@@ -148,7 +149,7 @@ export default function Home() {
               {swapping ? "Swapping" : "Swap"}
             </Button>
           </Card>
-  </Card> */}
+          </Card> */}
         <CoinSelectDialog
           setQuoting={quoteBag.setQuoting}
           open={modalOpen}
