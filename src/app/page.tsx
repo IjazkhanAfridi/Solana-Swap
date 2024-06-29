@@ -99,8 +99,7 @@ export default function Home() {
   return (
     <>
       <DappBar />
-      <Container maxWidth="sm">
-        <img src="/cloud.png" alt="clouds" className="clouds"/>
+      <Container maxWidth="sm" sx={{position:'relative'}}>
         <SwapComponentCard
           quotebag={quoteBag}
           direction="up"
@@ -117,6 +116,12 @@ export default function Home() {
           swapping={swapping}
           setSwapping={setSwapping}
         />
+        <img src="./person.png" alt="" style={{position:'absolute',bottom:'180px',right:'-100px',zIndex:'-2',height:'200px',width:'150px',transform:'rotate(15deg)'}} />
+        <Box >
+        <img src="./2.png" alt="" style={{position:'absolute',bottom:'-90px',left:'300px',zIndex:'-1'}} />
+        <img src="./3.png" alt="" style={{position:'absolute',bottom:'-120px',left:'50px',zIndex:'-1'}}/>
+        <img src="./4.png" alt="" style={{position:'absolute',bottom:'-90px',left:'-350px',zIndex:'-1'}}/>
+        </Box>
         {/*  <Card sx={{ my: 5, borderRadius: 4, p: 5 }}>
           <SwapInputComponent
             direction="up"

@@ -150,6 +150,7 @@ export default function SwapComponentCard(props: SwapComponentCardProps) {
         borderWidth: 1,
         borderColor: "rgba(138,201,228,0.2)",
         borderStyle: "solid",
+        backgroundColor:'#fff'
       }}
     >
       <Typography variant="h4" color="white" style={{ paddingBottom: 10 }}>

@@ -163,8 +163,6 @@
 //   );
 // }
 
-
-
 import {
   Avatar,
   Box,
@@ -175,21 +173,21 @@ import {
   TextField,
   Typography,
   styled,
-} from "@mui/material";
-import SolanaLogo from "./Solana-Logo.png";
-import React from "react";
-import { CoinlistItem } from "@/types/CoinList";
-import { DebouncedState } from "use-debounce";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import theme from "@/theme";
+} from '@mui/material';
+import SolanaLogo from './Solana-Logo.png';
+import React from 'react';
+import { CoinlistItem } from '@/types/CoinList';
+import { DebouncedState } from 'use-debounce';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import theme from '@/theme';
 
 // wrapper + input
 
 interface SwapInputComponentProps {
-  direction: "up" | "down";
+  direction: 'up' | 'down';
   value: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
-  setChangesSide: React.Dispatch<React.SetStateAction<"A" | "B">>;
+  setChangesSide: React.Dispatch<React.SetStateAction<'A' | 'B'>>;
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   inputToken: CoinlistItem;
   setInputToken: React.Dispatch<React.SetStateAction<CoinlistItem>>;
@@ -211,10 +209,10 @@ export default function SwapInputComponent(props: SwapInputComponentProps) {
   } = props;
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("handleinputhcange called");
-    console.log("direction:", direction);
-    if (direction == "up") {
-      console.log("called debounced");
+    console.log('handleinputhcange called');
+    console.log('direction:', direction);
+    if (direction == 'up') {
+      console.log('called debounced');
       debounced!();
     }
     var reg = /^-?\d*\.?\d*$/;
@@ -230,71 +228,71 @@ export default function SwapInputComponent(props: SwapInputComponentProps) {
         sx={{
           mb: 3,
           borderRadius: 1,
-          backgroundColor: "#FAFAFA",
-          borderColor: "rgba(138,201,228,0.2)",
+          backgroundColor: '#5d8fc0',
+          borderColor: 'rgba(138,201,228,0.2)',
           borderWidth: 2,
-          borderStyle: "solid",
+          borderStyle: 'solid',
           p: 2,
         }}
       >
         <Grid
           item
-          xs={direction == "up" ? 6 : 9}
+          xs={direction == 'up' ? 6 : 9}
           sx={{
             borderWidth: 2,
             borderRadius: 1,
-            backgroundColor: "#FAFAFA",
+            backgroundColor: '',
           }}
         >
           <TextField
             value={String(value)}
-            variant="standard"
-            label={direction === "up" ? "From:" : "To:"}
-            type="text"
-            size="medium"
+            variant='standard'
+            label={direction === 'up' ? 'From:' : 'To:'}
+            type='text'
+            size='medium'
             onChange={handleInputChange}
             InputProps={{
               disableUnderline: true,
               style: {
                 fontSize: 18,
-                color: "gray",
+                color: 'white',
                 opacity: 1,
-                WebkitTextFillColor: direction === "up" ? "black" : "gray",
+                WebkitTextFillColor: direction === 'up' ? 'black' : 'white',
               },
             }}
             InputLabelProps={{
-              style: { color: "#8AC9E4", fontWeight: "bold" },
+              style: { color: 'white', fontWeight: 'bold' },
             }}
             fullWidth
             sx={{
-              margin: "auto",
-              backgroundColor: "#FAFAFA",
+              margin: 'auto',
+              backgroundColor: '#5d8fc0',
               borderRadius: 10,
-              borderStyle: "hidden",
+              borderStyle: 'hidden',
             }}
           />
           <Typography
-            variant="caption"
-            sx={{ fontSize: "14px", color: "#AFB4C0" }}
+            variant='caption'
+            sx={{ fontSize: '14px', color: '#AFB4C0' }}
           >
             Balance: {inputToken.uiAmount}
           </Typography>
         </Grid>
-        <Grid item xs={direction === "up" ? 4 : 1}></Grid>
+        <Grid item xs={direction === 'up' ? 4 : 1}></Grid>
         {true && (
           <>
             <Grid item xs={2}>
-              {direction === "up" && (
+              {direction === 'up' && (
                 <Button
-                  variant="outlined"
-                  size="small"
+                  variant='outlined'
+                  size='small'
                   fullWidth
                   sx={{
                     borderRadius: 1,
                     paddingTop: 0,
                     paddingBottom: 0,
                     fontSize: 10,
-                    borderColor: "#8AC9E4",
+                    borderColor: '#8AC9E4',
                     borderWidth: 2,
                   }}
                   onClick={() => {
@@ -309,12 +307,12 @@ export default function SwapInputComponent(props: SwapInputComponentProps) {
                 sx={{
                   borderRadius: 1,
                 }}
-                size="medium"
+                size='medium'
                 startIcon={<Avatar src={inputToken.logo} />}
                 fullWidth
                 onClick={() => {
                   if (setChangesSide)
-                    setChangesSide(direction === "up" ? "A" : "B");
+                    setChangesSide(direction === 'up' ? 'A' : 'B');
                   setModalOpen(true);
                 }}
               >

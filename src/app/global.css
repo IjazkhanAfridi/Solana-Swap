@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 body{
-  background-color: #3DC2EC;
+  background-color: #5d8fc0;
 }
 
 .navbar{
@@ -325,7 +325,7 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(138, 201, 228, 1);
+  background: #5d8fc0;
 }
 
 /* Handle on hover */
